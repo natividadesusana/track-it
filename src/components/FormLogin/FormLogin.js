@@ -18,6 +18,7 @@ export default function FormLogin() {
 
     const URL = `${AUTH_URL}/login`;
     const body = { email, password };
+    console.log("Dados enviados para a API:", body);
 
     axios
       .post(URL, body)

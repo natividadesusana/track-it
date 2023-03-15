@@ -1,6 +1,6 @@
 import { ContainerLogin, Logo } from "./styles";
 import { Link } from "react-router-dom";
-import FormLogin from "../../components/LoginForm/FormLogin";
+import FormLogin from "../../components/FormLogin/FormLogin";
 import logo from "../../assets/images/logo.png";
 
 export default function LoginPage() {
