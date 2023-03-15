@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const ResetStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
 	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 	a, abbr, acronym, address, big, cite, code,
@@ -27,6 +27,7 @@ const ResetStyle = createGlobalStyle`
 	}
 	body {
 		line-height: 1;
+		font-family: 'Lexend Deca', sans-serif;
 	}
 	ol, ul {
 		list-style: none;
@@ -45,4 +46,4 @@ const ResetStyle = createGlobalStyle`
 	}
 `;
 
-export default ResetStyle;
+export default GlobalStyle;
