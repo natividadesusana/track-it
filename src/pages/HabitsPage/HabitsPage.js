@@ -1,5 +1,63 @@
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router";
+import { ContainerHabits, TitleContainer, HabitCardContainer } from "./styles";
+import { UserDataContext } from "../../Context/userData";
+import { HABITS_URL } from "../../Constants/urls";
+import axios from "axios";
+import Header from "../../components/Header/Header";
+import CreatesNewHabit from "../../components/CreatesNewHabit/CreatesNewHabit";
+import BoardHabits from "../../components/BoardHabits/BoardHabits";
+import Footer from "../../components/Footer/Footer";
+
 export default function HabitsPage() {
-    return(
-       'HabitsPage'
-    )
+  const [habits, setHabits] = useState([]);
+  const [cardVisibility, setCardVisibility] = useState(false);
+  const [listUpdate, setListUpdate] = useState(0);
+  const { config } = useContext(UserDataContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    axios
+      .get(HABITS_URL, config)
+      .then((resp) => {
+        setHabits(resp.data);
+      })
+      .catch((error) => {
+        alert(error.response.data.message);
+        navigate("/");
+      });
+  }, [config, navigate, cardVisibility, listUpdate]);
+
+  return (
+    <ContainerHabits>
+      <Header />
+      <TitleContainer>
+        <h2>Meus Hábitos</h2>
+        <button onClick={() => setCardVisibility(true)}>+</button>
+      </TitleContainer>
+
+      <CreatesNewHabit />
+
+      {habits.length > 0 ? (
+        <HabitCardContainer>
+          {habits.map((h, i) => (
+            <BoardHabits
+              key={i}
+              index={h.id}
+              name={h.name}
+              days={h.days}
+              visibility={listUpdate}
+              setVisibility={setListUpdate}
+            />
+          ))}
+        </HabitCardContainer>
+      ) : (
+        <p>
+          Você não tem nenhum hábito cadastrado ainda. Adicione um hábito para
+          começar a trackear!
+        </p>
+      )}
+      <Footer />
+    </ContainerHabits>
+  );
 }

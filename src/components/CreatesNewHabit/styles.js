@@ -1,0 +1,61 @@
+import styled from "styled-components";
+
+export const ContainerHabitCreation = styled.div`
+  display: ${(props) => props.displayMode};
+  flex-direction: column;
+  width: 340px;
+  height: 180px;
+  padding: 18px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+`;
+
+export const Input = styled.input`
+  box-sizing: border-box;
+  font-size: 20px;
+  width: 303px;
+  height: 45px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  ::placeholder {
+    color: #dbdbdb;
+  }
+  :disabled {
+    background-color: #f2f2f2;
+    opacity: 0.7;
+  }
+`;
+
+export const DaysWeek = styled.div`
+  display: flex;
+  gap: 5px;
+`;
+
+export const ButtonDay = styled.button`
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background: ${(props) =>
+    !props.daySelected.includes(props.index) ? "#ffffff" : "#cfcfcf"};
+  border: 1px solid
+    ${(props) =>
+      !props.daySelected.includes(props.index) ? "#d5d5d5" : "#cfcfcf"};
+  border-radius: 5px;
+  color: ${(props) =>
+    !props.daySelected.includes(props.index) ? "#dbdbdb" : "#ffffff"};
+  font-family: "Lexend Deca";
+  font-size: 20px;
+  :disabled {
+    opacity: 0.7;
+  }
+`;
+
+export const ContainerButtons = styled.div `
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+`

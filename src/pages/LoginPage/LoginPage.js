@@ -6,7 +6,7 @@ import logo from "../../assets/images/logo.png";
 export default function LoginPage() {
   return (
     <ContainerLogin>
-      <Logo src={logo} alt={"Logo TrackIt"} />
+      <Logo src={logo} alt="Logo TrackIt" />
       <FormLogin />
       <Link to="/cadastro" data-test="login-btn">
         <p> Não tem uma conta? Cadastre-se!</p>

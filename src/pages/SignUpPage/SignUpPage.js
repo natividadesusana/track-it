@@ -6,7 +6,7 @@ import logo from "../../assets/images/logo.png";
 export default function SignUpPage() {
   return (
     <ContainerSignUp>
-      <Logo src={logo} alt={"Logo TrackIt"} />
+      <Logo src={logo} alt="Logo TrackIt" />
       <FormSignUp />
       <Link to="/" data-test="login-link">
         <p> Já tem uma conta? Faça login!</p>
