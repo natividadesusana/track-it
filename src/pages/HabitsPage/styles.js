@@ -1,20 +1,16 @@
 import styled from "styled-components";
 
 export const ContainerHabits = styled.div`
-  width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-color: #E5E5E5; 
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
+  justify-content: left;
+  align-items: left;
+  padding: 70px 20px;
   p {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
     color: #666666;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 400;
   }
 `;
 
@@ -22,13 +18,14 @@ export const TitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #E5E5E5;
-  margin-bottom: 15px;
+  background-color: #e5e5e5;
   h2 {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 29px;
     color: #126ba5;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 18px;
+    font-size: 22px;
+    line-height: 30px;
   }
   button {
     width: 40px;
@@ -44,10 +41,8 @@ export const TitleContainer = styled.div`
 `;
 
 export const HabitCardContainer = styled.div`
+  width: 100%;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  @media (max-width: 725px) {
-    justify-content: center;
-  }
 `;

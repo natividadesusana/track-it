@@ -16,7 +16,7 @@ export const Input = styled.input`
   box-sizing: border-box;
   font-size: 20px;
   width: 100%;
-  max-width: 600px; 
+  max-width: 600px;
   max-width: 303px;
   height: 45px;
   border-radius: 5px;
@@ -58,4 +58,3 @@ export const ContainerButtons = styled.div`
   display: flex;
   justify-content: flex-end;
 `;
-

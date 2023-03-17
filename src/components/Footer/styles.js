@@ -25,7 +25,29 @@ export const ContainerFooter = styled.div`
 
 export const CustomCircularProgressbar = styled.div`
   width: 91px;
-  margin-bottom: 70px;
+  /* height: 91px; */
+  position: relative;
+  margin-bottom: 100px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65%;
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 16px;
+  }
 `;

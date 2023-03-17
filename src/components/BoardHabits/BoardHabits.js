@@ -30,7 +30,12 @@ export default function BoardHabits({
 
   return (
     <BoardContainer data-test="habit-container">
-      <img data-test="habit-delete-btn" onClick={deleteHabits} src={dump} alt="Imagem Lixeira" />
+      <img
+        data-test="habit-delete-btn"
+        onClick={deleteHabits}
+        src={dump}
+        alt="Imagem Lixeira"
+      />
 
       <h2 data-test="habit-name">{name}</h2>
 

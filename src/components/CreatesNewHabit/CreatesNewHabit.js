@@ -1,5 +1,11 @@
 import { useState } from "react";
-import {ContainerHabitCreation, Input, DaysWeek, ButtonDay, ContainerButtons} from "./styles";
+import {
+  ContainerHabitCreation,
+  Input,
+  DaysWeek,
+  ButtonDay,
+  ContainerButtons,
+} from "./styles";
 import ButtonCard from "../ButtonCard/ButtonCard";
 
 export default function CreateNewHabit({ displayMode, setDisplayMode }) {
@@ -22,8 +28,12 @@ export default function CreateNewHabit({ displayMode, setDisplayMode }) {
   };
 
   return (
-    <ContainerHabitCreation  data-test="habit-create-container" displayMode={displayMode}>
-      <Input data-test="habit-name-input"
+    <ContainerHabitCreation
+      data-test="habit-create-container"
+      displayMode={displayMode}
+    >
+      <Input
+        data-test="habit-name-input"
         placeholder="Nome do hábito"
         disabled={modeDisable}
         value={nameHabit}
