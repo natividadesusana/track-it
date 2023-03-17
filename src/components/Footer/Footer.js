@@ -9,13 +9,13 @@ export default function Footer() {
   const { percentage } = useContext(UserDataContext);
 
   return (
-    <ContainerFooter>
-      <Link to={"/habitos"}>
+    <ContainerFooter data-test="menu">
+      <Link to={"/habitos"} data-test="habit-link" >
         <h3>Hábitos</h3>
       </Link>
 
       <CustomCircularProgressbar>
-        <Link to="/hoje">
+        <Link to="/hoje" data-test="today-link" >
           <CircularProgressbar
             value={percentage}
             text={`Hoje`}
@@ -33,7 +33,7 @@ export default function Footer() {
         </Link>
       </CustomCircularProgressbar>
 
-      <Link to={"/historico"}>
+      <Link to={"/historico"} data-test="history-link" >
         <h3>Histórico</h3>
       </Link>
     </ContainerFooter>

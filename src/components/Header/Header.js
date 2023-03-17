@@ -9,7 +9,7 @@ export default function Header() {
   const { data } = useContext(UserDataContext);
 
   return (
-    <ContainerHeader>
+    <ContainerHeader data-test="header">
       <Link to="/">
         <Logo src={logoName} alt="Logo TrackIt" />
       </Link>

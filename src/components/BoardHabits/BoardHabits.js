@@ -29,14 +29,14 @@ export default function BoardHabits({
   }
 
   return (
-    <BoardContainer>
-      <img onClick={deleteHabits} src={dump} alt="Imagem Lixeira" />
+    <BoardContainer data-test="habit-container">
+      <img data-test="habit-delete-btn" onClick={deleteHabits} src={dump} alt="Imagem Lixeira" />
 
-      <h2>{name}</h2>
+      <h2 data-test="habit-name">{name}</h2>
 
       <DayWeekContainer>
         {daysWeek.map((day, i) => (
-          <Days key={i} index={i} days={days}>
+          <Days data-test="habit-day" key={i} index={i} days={days}>
             {day}
           </Days>
         ))}

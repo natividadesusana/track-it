@@ -22,8 +22,8 @@ export default function CreateNewHabit({ displayMode, setDisplayMode }) {
   };
 
   return (
-    <ContainerHabitCreation displayMode={displayMode}>
-      <Input
+    <ContainerHabitCreation  data-test="habit-create-container" displayMode={displayMode}>
+      <Input data-test="habit-name-input"
         placeholder="Nome do hábito"
         disabled={modeDisable}
         value={nameHabit}
@@ -33,6 +33,7 @@ export default function CreateNewHabit({ displayMode, setDisplayMode }) {
         {daysWeek.map((day, i) => {
           return (
             <ButtonDay
+              data-test="habit-day"
               key={i}
               index={i}
               disabled={modeDisable}
@@ -47,6 +48,7 @@ export default function CreateNewHabit({ displayMode, setDisplayMode }) {
 
       <ContainerButtons>
         <ButtonCard
+          data-test="habit-create-cancel-btn"
           content={"Cancelar"}
           modeDisable={modeDisable}
           setModeDisable={setModeDisable}
@@ -55,6 +57,7 @@ export default function CreateNewHabit({ displayMode, setDisplayMode }) {
           color="#52B6FF"
         />
         <ButtonCard
+          data-test="habit-create-save-btn"
           content={"Salvar"}
           modeDisable={modeDisable}
           setModeDisable={setModeDisable}

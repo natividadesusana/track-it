@@ -11,7 +11,7 @@ import Footer from "../../components/Footer/Footer";
 
 export default function HabitsPage() {
   const [habits, setHabits] = useState([]);
-  const [cardVisibility, setCardVisibility] = useState(false);
+  const [cardVisibility, setCardVisibility] = useState('none');
   const [listUpdate, setListUpdate] = useState(0);
   const { config } = useContext(UserDataContext);
   const navigate = useNavigate();
@@ -33,10 +33,10 @@ export default function HabitsPage() {
       <Header />
       <TitleContainer>
         <h2>Meus Hábitos</h2>
-        <button onClick={() => setCardVisibility(true)}>+</button>
+        <button data-test="habit-create-btn" onClick={() => setCardVisibility('flex')}>+</button>
       </TitleContainer>
 
-      <CreatesNewHabit />
+      <CreatesNewHabit displayMode={cardVisibility} setDisplayMode={setCardVisibility}/>
 
       {habits.length > 0 ? (
         <HabitCardContainer>
