@@ -40,3 +40,4 @@ export const Days = styled.button`
   color: ${props => !props.days.includes(props.index) ? '#dbdbdb' : '#ffffff'};
   font-size: 20px;
 `;
+

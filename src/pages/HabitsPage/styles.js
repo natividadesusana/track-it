@@ -6,7 +6,7 @@ export const ContainerHabits = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: blue;
+  background-color: #E5E5E5; 
   padding-left: 20px;
   padding-right: 20px;
   box-sizing: border-box;
@@ -22,7 +22,8 @@ export const TitleContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: yellow;
+  background-color: #E5E5E5;
+  margin-bottom: 15px;
   h2 {
     font-weight: 400;
     font-size: 22px;

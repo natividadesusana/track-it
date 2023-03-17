@@ -24,8 +24,8 @@ export default function FormLogin() {
       .post(URL, body)
       .then((resp) => {
         setDisable(false);
-        const userDataString = JSON.stringify(resp.data);
-        localStorage.setItem("userData", userDataString);
+        const dataString = JSON.stringify(resp.data);
+        localStorage.setItem("userDataString", dataString);
         navigate("/hoje");
       })
       .catch((error) => {

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ButtonSave = styled.button`
-  height: 20px;
-  width: 50px;
+  width: 84px;
+  height: 35px;
   box-sizing: border-box;
   background-color: ${(props) => props.background};
   color: ${(props) => props.color};
@@ -15,6 +15,9 @@ export const ButtonSave = styled.button`
   font-size: 15px;
   text-align: center;
   position: relative;
+  padding: 0 10px;
+  border: none;
+  outline: none;
   :disabled {
     opacity: 0.7;
   }

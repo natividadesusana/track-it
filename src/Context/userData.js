@@ -18,7 +18,7 @@ export default function UserDataProvider({ children }) {
 
   const config = {
     headers: {
-      Authorization: `Beares ${data === null ? "" : data.token}`,
+      Authorization: `Bearer ${data === null ? "" : data.token}`,
     },
   };
 
