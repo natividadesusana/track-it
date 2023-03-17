@@ -26,6 +26,7 @@ export default function FormLogin() {
         const dataString = JSON.stringify(resp.data);
         localStorage.setItem("userDataString", dataString);
         navigate("/hoje");
+        window.location.reload()
       })
       .catch((error) => {
         alert(error.response.data.message);
