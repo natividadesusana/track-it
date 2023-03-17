@@ -11,7 +11,7 @@ import dayjs from "dayjs";
 
 export default function TodayPage() {
   const [todayHabitList, setTodayHabitList] = useState([]);
-  const [visibility, setVisibility] = useState(0);
+  const [visibilityStatus, setVisibilityStatus] = useState(0);
   const [taggedlist, setTaggedlist] = useState([]);
   const navigate = useNavigate();
   const { percentage, calculatePercentage, config } =
@@ -44,7 +44,7 @@ export default function TodayPage() {
           navigate("/");
         }
       });
-  }, [config, navigate, visibility, calculatePercentage]);
+  }, [config, navigate, visibilityStatus, calculatePercentage]);
 
   return (
     <>
@@ -70,8 +70,8 @@ export default function TodayPage() {
               key={i}
               name={h.name}
               checked={h.done}
-              visibility={visibility}
-              setVisibility={setVisibility}
+              visibilityStatus={visibilityStatus}
+              setVisibilityStatus={setVisibilityStatus}
               currentSequence={h.currentSequence}
               highestSequence={h.highestSequence}
             />

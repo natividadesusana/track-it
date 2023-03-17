@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "./styles";
-import { AUTH_URL } from "../../Constants/urls";
+import { AUTH_SIGNUP_URL } from "../../Constants/urls";
 import { useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 import { White } from "../../Constants/colors";
@@ -18,12 +18,11 @@ export default function FormSignUp() {
     e.preventDefault();
     setDisable(true);
 
-    const URL = `${AUTH_URL}/sign-up`;
     const body = { email, name, image, password };
     console.log("Dados enviados para a API:", body);
 
     axios
-      .post(URL, body)
+      .post(AUTH_SIGNUP_URL, body)
       .then((resp) => {
         setDisable(false);
         navigate("/");

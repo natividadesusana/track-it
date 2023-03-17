@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "./styles";
-import { AUTH_URL } from "../../Constants/urls";
+import { AUTH_LOGIN_URL } from "../../Constants/urls";
 import { useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 import { White } from "../../Constants/colors";
@@ -16,12 +16,11 @@ export default function FormLogin() {
     e.preventDefault();
     setDisable(true);
 
-    const URL = `${AUTH_URL}/login`;
     const body = { email, password };
     console.log("Dados enviados para a API:", body);
 
     axios
-      .post(URL, body)
+      .post(AUTH_LOGIN_URL, body)
       .then((resp) => {
         setDisable(false);
         const dataString = JSON.stringify(resp.data);

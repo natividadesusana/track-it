@@ -14,8 +14,8 @@ export default function BoardToday({
   id,
   name,
   checked,
-  visibility,
-  setVisibility,
+  visibilityStatus,
+  setVisibilityStatus,
   currentSequence,
   highestSequence,
 }) {
@@ -29,7 +29,7 @@ export default function BoardToday({
     axios
       .post(URL, null, config)
       .then((resp) => {
-        setVisibility(visibility + 1);
+        setVisibilityStatus(visibilityStatus + 1);
       })
       .catch((error) => {
         alert(error.data.response.message);
@@ -37,7 +37,7 @@ export default function BoardToday({
   }
 
   return (
-    <ContainerBoard visibility={checked}>
+    <ContainerBoard visibilityStatus={checked}>
       <Container>
         <p data-test="today-habit-name">{name}</p>
         <SequenceCurrent data-test="today-habit-sequence" status={checked}>
