@@ -65,7 +65,6 @@ export default function TodayPage() {
         <ListToday>
           {todayHabitList.map((h, i) => (
             <BoardToday
-              data-test="today-habit-container"
               id={h.id}
               key={i}
               name={h.name}

@@ -37,7 +37,7 @@ export default function BoardToday({
   }
 
   return (
-    <ContainerBoard visibilityStatus={checked}>
+    <ContainerBoard data-test="today-habit-container" visibilityStatus={checked}>
       <Container>
         <p data-test="today-habit-name">{name}</p>
         <SequenceCurrent data-test="today-habit-sequence" status={checked}>

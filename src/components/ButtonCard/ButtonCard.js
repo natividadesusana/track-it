@@ -55,6 +55,7 @@ export default function ButtonCard({
       color={color}
       background={background}
       hover={hover}
+      data-test={content === "Salvar" ? "habit-create-save-btn" : "habit-create-cancel-btn"}
     >
       {modeDisable ? (
         <ThreeDots color={White} height="12" width="40" />
