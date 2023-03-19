@@ -28,7 +28,7 @@ export default function BoardToday({
 
     axios
       .post(URL, null, config)
-      .then((resp) => {
+      .then(() => {
         setVisibilityStatus(visibilityStatus + 1);
       })
       .catch((error) => {

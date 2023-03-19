@@ -34,7 +34,7 @@ export default function ButtonCard({
       } else {
         axios
           .post(HABITS_URL, body, config)
-          .then((resp) => {
+          .then(() => {
             setDisplayMode("none");
             setNameHabit("");
             setDaySelected([]);

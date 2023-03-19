@@ -53,9 +53,9 @@ export default function TodayPage() {
         <Title taggedlist={taggedlist}>
           <h1 data-test="today">{day}</h1>
           {todayHabitList.length === 0 ? (
-            <p>Nenhum hábito encontrado para hoje!</p>
+            <p data-test="today-counter">Nenhum hábito encontrado para hoje!</p>
           ) : (
-            <p data-test="today-counter">
+            <p>
               {taggedlist.length === 0
                 ? "Nenhum hábito concluído ainda"
                 : `${percentage}% dos hábitos concluídos`}

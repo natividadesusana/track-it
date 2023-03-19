@@ -23,7 +23,7 @@ export default function FormSignUp() {
 
     axios
       .post(AUTH_SIGNUP_URL, body)
-      .then((resp) => {
+      .then(() => {
         setDisable(false);
         navigate("/");
       })
