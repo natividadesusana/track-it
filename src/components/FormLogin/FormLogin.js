@@ -10,7 +10,6 @@ export default function FormLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [disable, setDisable] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
   function login(e) {
@@ -23,10 +22,11 @@ export default function FormLogin() {
     axios
       .post(AUTH_LOGIN_URL, body)
       .then((resp) => {
+        setDisable(false);
         const dataString = JSON.stringify(resp.data);
         localStorage.setItem("userDataString", dataString);
-        setIsLoggedIn(true);
         navigate("/hoje");
+        window.location.reload()
       })
       .catch((error) => {
         alert(error.response.data.message);
@@ -34,10 +34,6 @@ export default function FormLogin() {
         setEmail("");
         setPassword("");
       });
-  }
-
-  if (isLoggedIn) {
-    return null; 
   }
 
   return (
