@@ -11,7 +11,7 @@ export const ContainerBoard = styled.div`
   button {
     width: 69px;
     height: 69px;
-    background: ${(props) => (props.visibilityStatus ? "#8FC549" : "#EBEBEB")};
+    background: ${(props) => (props.visibilityStatus ? "#8fc549" : "#ebebeb")};
     border: 1px solid #e7e7e7;
     border-radius: 5px;
     cursor: pointer;
@@ -43,7 +43,7 @@ export const SequenceCurrent = styled.div`
   }
   span {
     width: 100%;
-    color: ${(props) => (props.visibilityStatus ? "#8FC549" : "#666666")};
+    color: ${(props) => (props.status ? "#8fc549" : "#666666")};
   }
 `;
 
@@ -60,7 +60,7 @@ export const SequenceHighest = styled.div`
     width: 100%;
     color: ${(props) =>
       props.status && props.currentSequence === props.highestSequence
-        ? "#8FC549"
+        ? "#8fc549"
         : "#666666"};
   }
 `;
