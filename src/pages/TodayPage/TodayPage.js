@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import { UserDataContext } from "../../Context/userData";
 import { HABITS_URL } from "../../Constants/urls";
+import { PageWithLoading } from "../../components/PageWithLoading/PageWithLoading";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import BoardToday from "../../components/BoardToday/BoardToday";
@@ -49,34 +50,39 @@ export default function TodayPage() {
   return (
     <>
       <Header />
-      <ContainerToday>
-        <Title taggedlist={taggedlist}>
-          <h1 data-test="today">{day}</h1>
-          {todayHabitList.length === 0 ? (
-            <p data-test="today-counter">Nenhum hábito encontrado para hoje!</p>
-          ) : (
-            <p data-test="today-counter">
-              {taggedlist.length === 0
-                ? "Nenhum hábito concluído ainda"
-                : `${percentage}% dos hábitos concluídos`}
-            </p>
-          )}
-        </Title>
-        <ListToday>
-          {todayHabitList.map((h, i) => (
-            <BoardToday
-              id={h.id}
-              key={i}
-              name={h.name}
-              checked={h.done}
-              visibilityStatus={visibilityStatus}
-              setVisibilityStatus={setVisibilityStatus}
-              currentSequence={h.currentSequence}
-              highestSequence={h.highestSequence}
-            />
-          ))}
-        </ListToday>
-      </ContainerToday>
+      <PageWithLoading isLoading={todayHabitList.length === 0}>
+        <ContainerToday>
+          <Title taggedlist={taggedlist}>
+            <h1 data-test="today">{day}</h1>
+            {todayHabitList.length === 0 ? (
+              <p data-test="today-counter">
+                Nenhum hábito encontrado para hoje!
+              </p>
+            ) : (
+              <p data-test="today-counter">
+                {taggedlist.length === 0
+                  ? "Nenhum hábito concluído ainda"
+                  : `${percentage}% dos hábitos concluídos`}
+              </p>
+            )}
+          </Title>
+          <ListToday>
+            {todayHabitList.map((h, i) => (
+              <BoardToday
+                id={h.id}
+                key={i}
+                name={h.name}
+                checked={h.done}
+                visibilityStatus={visibilityStatus}
+                setVisibilityStatus={setVisibilityStatus}
+                currentSequence={h.currentSequence}
+                highestSequence={h.highestSequence}
+              />
+            ))}
+          </ListToday>
+        </ContainerToday>
+      </PageWithLoading>
+
       <Footer />
     </>
   );
