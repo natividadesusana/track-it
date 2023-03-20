@@ -20,3 +20,10 @@ export const ContainerHistoric = styled.div`
     font-weight: 400;
   }
 `;
+
+export const ContainerCalendar = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
