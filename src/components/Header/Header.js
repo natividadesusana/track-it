@@ -1,8 +1,7 @@
-import { ContainerHeader, Logo, UserImage } from "./styles";
+import { ContainerHeader, UserImage } from "./styles";
 import { UserDataContext } from "../../Context/userData";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import logoName from "../../assets/images/logoName.png";
 import iconUser from "../../assets/images/iconUser.png";
 
 export default function Header() {
@@ -11,7 +10,7 @@ export default function Header() {
   return (
     <ContainerHeader data-test="header">
       <Link to="/">
-        <Logo src={logoName} alt="Logo TrackIt" />
+        <p>TrackIt</p>
       </Link>
       <UserImage src={!data ? iconUser : data.image} alt="User Image" />
     </ContainerHeader>

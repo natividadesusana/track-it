@@ -11,10 +11,16 @@ export const ContainerHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
-
-export const Logo = styled.img`
-  margin-left: 20px;
+  z-index: 2;
+  a {
+    font-family: "Playball";
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 49px;
+    color: #ffffff;
+    margin-left: 20px;
+    text-decoration: none;
+  }
 `;
 
 export const UserImage = styled.img`
