@@ -56,7 +56,7 @@ export default function TodayPage() {
             <h1 data-test="today">{day}</h1>
             {todayHabitList.length === 0 ? (
               <p data-test="today-counter">
-                Nenhum hábito encontrado para hoje!
+                Nenhum hábito concluído ainda
               </p>
             ) : (
               <p data-test="today-counter">
