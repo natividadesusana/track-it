@@ -13,7 +13,7 @@ export const ContainerHeader = styled.div`
   align-items: center;
   z-index: 2;
   a {
-    font-family: "Playball";
+    font-family: 'Playball', cursive;
     font-weight: 400;
     font-size: 38px;
     line-height: 49px;
