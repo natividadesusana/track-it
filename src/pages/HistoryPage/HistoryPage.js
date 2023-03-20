@@ -1,18 +1,18 @@
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { ContainerHistoric } from "./styles";
-import { PageWithLoading } from "../../components/PageWithLoading/PageWithLoading";
+// import { PageWithLoading } from "../../components/PageWithLoading/PageWithLoading";
 
-export default function HistoricPage({ isLoading }) {
+export default function HistoricPage() {
   return (
     <>
       <Header />
-      <PageWithLoading isLoading={isLoading}>
+      {/* <PageWithLoading isLoading={isLoading}> */}
         <ContainerHistoric>
           <h1>Histórico</h1>
           <p>Em breve você poderá ver o histórico dos seus hábitos aqui!</p>
         </ContainerHistoric>
-      </PageWithLoading>
+      {/* </PageWithLoading> */}
       <Footer />
     </>
   );

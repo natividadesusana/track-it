@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext, useState, useEffect } from "react";
 import { UserDataContext } from "../../Context/userData";
 import { HABITS_URL } from "../../Constants/urls";
-import { PageWithLoading } from "../../components/PageWithLoading/PageWithLoading";
+// import { PageWithLoading } from "../../components/PageWithLoading/PageWithLoading";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import BoardToday from "../../components/BoardToday/BoardToday";
@@ -50,7 +50,7 @@ export default function TodayPage() {
   return (
     <>
       <Header />
-      <PageWithLoading isLoading={todayHabitList.length === 0}>
+      {/* <PageWithLoading isLoading={todayHabitList.length === 0}> */}
         <ContainerToday>
           <Title taggedlist={taggedlist}>
             <h1 data-test="today">{day}</h1>
@@ -81,8 +81,7 @@ export default function TodayPage() {
             ))}
           </ListToday>
         </ContainerToday>
-      </PageWithLoading>
-
+      {/* </PageWithLoading> */}
       <Footer />
     </>
   );
