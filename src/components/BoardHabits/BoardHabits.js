@@ -19,7 +19,7 @@ export default function BoardHabits({
     if (window.confirm("Deseja realmente apagar o hábito?") === true) {
       axios
         .delete(`${HABITS_URL}/${index}`, config)
-        .then((resp) => {
+        .then(() => {
           setVisibility((visibility += 1));
         })
         .catch((error) => {

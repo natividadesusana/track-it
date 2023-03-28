@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { ContainerHabits, TitleContainer, HabitCardContainer } from "./styles";
 import { UserDataContext } from "../../Context/userData";
 import { HABITS_URL } from "../../Constants/urls";
-// import { PageWithLoading } from "../../components/PageWithLoading/PageWithLoading";
+import { PageWithLoading } from "../../components/PageWithLoading/PageWithLoading";
 import axios from "axios";
 import Header from "../../components/Header/Header";
 import CreatesNewHabit from "../../components/CreatesNewHabit/CreatesNewHabit";
@@ -32,7 +32,7 @@ export default function HabitsPage() {
   return (
     <ContainerHabits>
       <Header />
-      {/* <PageWithLoading isLoading={habits.length === 0}> */}
+      <PageWithLoading isLoading={habits.length === 0}>
       <TitleContainer>
         <h2>Meus Hábitos</h2>
         <button
@@ -67,7 +67,7 @@ export default function HabitsPage() {
           começar a trackear!
         </p>
       )}
-      {/* </PageWithLoading> */}
+      </PageWithLoading>
       <Footer />
     </ContainerHabits>
   );
