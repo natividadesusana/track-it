@@ -4,9 +4,9 @@ export const ContainerHabitCreation = styled.div`
   display: ${(props) => props.displayMode};
   flex-direction: column;
   width: 100%;
-  max-width: 340px;
   height: auto;
-  padding: 18px;
+  box-sizing: border-box;
+  padding: 20px;
   margin-bottom: 30px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -16,8 +16,6 @@ export const Input = styled.input`
   box-sizing: border-box;
   font-size: 20px;
   width: 100%;
-  max-width: 600px;
-  max-width: 303px;
   height: 45px;
   border-radius: 5px;
   padding: 10px;
