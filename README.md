@@ -1,6 +1,6 @@
-# *TrackIt Project*
+# Project TrackIt
 
-### *TrackIt is a habit tracking app! With the right to register, login and many libraries.*
+The TrackIt project is a complete habit tracking application. With it, you can create and track your daily, weekly, and monthly habits. TrackIt lets you record your habits and monitor your progress quickly and easily. It offers an intuitive and easy-to-use interface that allows you to add and delete habits with just a few clicks. The app also offers a number of features like notifications and a rewards system to keep you motivated and on track. See below how to run the application and check the link to access it online.
 
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
 <img src="https://user-images.githubusercontent.com/95102911/226362966-2285e429-aa5d-4e43-8574-13ec3fa2a918.png" width="300">
@@ -11,82 +11,39 @@
 <img src="https://user-images.githubusercontent.com/95102911/226363024-260acb22-4e00-4f54-a10e-0573474fb5c5.png" width="300">
 </div>
 
-_____
+#### Demo: https://projeto11-trackit-fawn-kappa.vercel.app/
 
-# Getting Started with Create React App
+# ℹ️ About
+TrackIt was created to help people track their habits and reach their goals. It was developed with the following features:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Login Screen: allows the user to log in to the application and be redirected to the daily monitoring screen
+- Registration screen: allows the user to create a new account in the application
+- Habits Screen: allows the user to view their habits and create new habits
+- Today Screen: Allows the user to track their daily habits and see their progress
 
-## Available Scripts
+TrackIt was developed with the aim of helping people achieve their goals and improve their lives. The motivation behind this project was to provide a simple and easy-to-use tool that would help people stick to their habits and reach their goals more efficiently.
 
-In the project directory, you can run:
+## 🛠️ Technologies
+The technologies used in this project were:
 
-### `npm start`
+- React
+- Axios
+- StyledComponents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+React was chosen as the core technology because it offers a number of resources and libraries that facilitate the development of user interfaces. Axios was used to make the HTTP calls to the project's API and Styled Components was used to style the application's components.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🖇 How to run
+To run the application, follow these steps:
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone the repository using the following command: git clone https://github.com/natividadesusana/trackit.git
+2. Navigate to the project folder: cd trackit
+3. Install project dependencies: npm install
+4. Run the application: npm start
+5. Access the application in your browser at: http://localhost:3000
 
 _____
 
-# TrackIt API
+# API
 
 - Sign up
     
@@ -363,54 +320,3 @@ _____
     ]
     ```
     
-_____
-
-## Requirements
-
-- Login screen (`/` route)
-     - [ ] The email and password must be sent to the API according to the documentation
-     - [ ] While loading, the fields and the button must be disabled, according to the layout
-         - 💡 **Tip**: to make the loading animation, use the `react-loader-spinner` library
-     - [ ] In case of success, the user should be redirected to the route `/hoje`
-     - [ ] In case of failure, an `alert` must be displayed informing the user of the error and the fields/button must be enabled again
-     - [ ] When clicking on the link to register, the user must be redirected to the route `/registration`
-
-- Registration screen (route `/registration`)
-      - [ ] The data must be sent to the API according to the documentation
-      - [ ] While loading, the fields and the button must be disabled, according to the layout
-      - [ ] In case of success, the user must be redirected to the `/` route (Login route)
-      - [ ] In case of failure, an `alert` must be displayed informing the user of the error and the fields/button must be enabled again
-      - [ ] When clicking on the login link, the user should be redirected to the `/` route (Login route)
-
-- Topo e Menu
-    - [ ]  Topo e menu devem ter posicionamento fixo
-    - [ ]  No topo deve ser exibida a foto do usuário conforme layout
-        - **OBS**: Utilize **ContextAPI** para compartilhar o estado do usuário logado globalmente entre os componentes.
-    - [ ]  No menu, os 3 botões de Hábitos, Hoje e Histórico devem redirecionar o usuário para as rotas `/habitos`, `/hoje` e `/historico` respectivamente
-    - [ ]  O botão de Hoje deve exibir uma barra de progresso circular indicando a porcentagem de conclusão de hábitos de hoje do usuário
-        - 💡 **Dica**: utilize a biblioteca `react-circular-progressbar`
-        - **OBS**: Esse progresso deve ser atualizado automaticamente conforme o usuário for concluindo os hábitos. Utilize **ContextAPI** para compartilhar esse estado globalmente entre os componentes.
-
-- Habits screen (route `/habitos`)
-     - [ ] Load user habits, sending request to API according to documentation and displaying below according to layout
-     - [ ] When clicking to delete a habit, a `confirm` should be displayed to confirm if the user would really like to delete the habit. If so, a request must be sent to the API according to the documentation and the habits reloaded shortly afterwards.
-     - [ ] If the user does not have any habit registered, the text must be displayed according to the layout
-     - [ ] When clicking on the "+" button, a habit registration form should be displayed just below the title according to the layout
-     - [ ] The user must enter the name of the habit in a text field and select the days of the week that he wants to perform the habit according to the layout
-     - [ ] When saving, the data must be sent to the API according to the documentation
-     - [ ] While loading, the text field and the button must be disabled, according to the layout. The buttons for the days of the week must be disabled, but it is not necessary to change the visuals during loading.
-     - [ ] In case of success, the fields must be cleared and re-enabled, the form must be hidden again and the list of habits below reloaded
-     - [ ] In case of error, the fields must be re-enabled and an alert must indicate the problem to the user
-     - [ ] When Canceling, the form must be hidden. If you have data already filled in, they must be kept if the user reopens the creation form.
-
-- Today Screen (route `/today`)
-     - [ ] Load the user's habits today, sending a request to the API according to the documentation and displaying it below according to the layout
-     - [ ] The title of the screen must display today according to the layout
-         - 💡 **Tip**: use the `dayjs` library for this
-     - [ ] In the subtitle, the phrase "No habits completed yet" or "x% of habits completed" should be displayed, depending on the user's progress
-     - [ ] When marking or unmarking a habit as completed, a request must be sent to the API according to the documentation. It is not necessary to put loading.
-     - [ ] When marking a habit as completed, the count of the **current sequence** must be set to green
-     - [ ] If the current sequence is **equal to the user's record and greater than zero**, this must also be displayed in green
-
-- History screen (route `/historico`)
-     - [ ] The text must be displayed according to the layout
