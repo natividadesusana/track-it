@@ -1,6 +1,6 @@
-# Project TrackIt
+# Project Track It
 
-The TrackIt project is a complete habit tracking application. With it, you can create and track your daily, weekly, and monthly habits. TrackIt lets you record your habits and monitor your progress quickly and easily. It offers an intuitive and easy-to-use interface that allows you to add and delete habits with just a few clicks. The app also offers a number of features like notifications and a rewards system to keep you motivated and on track. See below how to run the application and check the link to access it online.
+The Track It project is a complete habit tracking application. With it, you can create and track your daily, weekly, and monthly habits. Track It lets you record your habits and monitor your progress quickly and easily. It offers an intuitive and easy-to-use interface that allows you to add and delete habits with just a few clicks. The app also offers a number of features like notifications and a rewards system to keep you motivated and on track. See below how to run the application and check the link to access it online.
 
 <div style="display: flex; justify-content: space-between; flex-wrap: wrap;">
 <img src="https://user-images.githubusercontent.com/95102911/226362966-2285e429-aa5d-4e43-8574-13ec3fa2a918.png" width="300">
@@ -13,25 +13,37 @@ The TrackIt project is a complete habit tracking application. With it, you can c
 
 #### Demo: https://projeto11-trackit-fawn-kappa.vercel.app/
 
+<hr/>
+
 # ℹ️ About
-TrackIt was created to help people track their habits and reach their goals. It was developed with the following features:
+Track It was created to help people track their habits and reach their goals. It was developed with the following features:
 
 - Login Screen: allows the user to log in to the application and be redirected to the daily monitoring screen
 - Registration screen: allows the user to create a new account in the application
 - Habits Screen: allows the user to view their habits and create new habits
 - Today Screen: Allows the user to track their daily habits and see their progress
 
-TrackIt was developed with the aim of helping people achieve their goals and improve their lives. The motivation behind this project was to provide a simple and easy-to-use tool that would help people stick to their habits and reach their goals more efficiently.
+Track It was developed with the aim of helping people achieve their goals and improve their lives. The motivation behind this project was to provide a simple and easy-to-use tool that would help people stick to their habits and reach their goals more efficiently.
+
+<hr/>
 
 ## 🛠️ Technologies
-The technologies used in this project were:
 
-- React
-- Axios
-- StyledComponents
+<div> 
+ <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" width="52" alt="react logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="52" alt="js logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" width="52" alt="html5 logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" width="52" alt="css3 logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" height="40" width="52" alt="figma logo"   />        
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="52" alt="git logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" width="52" alt="github logo" /> 
+<div>
+<br>
 
 React was chosen as the core technology because it offers a number of resources and libraries that facilitate the development of user interfaces. Axios was used to make the HTTP calls to the project's API and Styled Components was used to style the application's components.
 
+<hr/>
+    
 ## 🖇 How to run
 To run the application, follow these steps:
 
@@ -41,7 +53,7 @@ To run the application, follow these steps:
 4. Run the application: npm start
 5. Access the application in your browser at: http://localhost:3000
 
-_____
+<hr/>
 
 # API
 
