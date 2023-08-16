@@ -69,10 +69,10 @@ To run the application, follow these steps:
     
      ``` jsx
      {
-     email: "...",
-     name: "...",
-     image: "...",
-     password: "..."
+       email: "...",
+       name: "...",
+       image: "...",
+       password: "..."
      }
      ```
 - Login
@@ -87,8 +87,8 @@ To run the application, follow these steps:
     
      ``` jsx
      {
-     email: "...",
-     password: "..."
+       email: "...",
+       password: "..."
      }
      ```
     
@@ -146,16 +146,16 @@ To run the application, follow these steps:
     
      ```json
      [
-     {
-     id: 1,
-     name: "Habit name",
-     days: [1, 3, 5]
-     },
-     {
-     id: 2,
-     name: "Habit 2 name",
-     days: [1, 3, 4, 6]
-     }
+      {
+       id: 1,
+       name: "Habit name",
+       days: [1, 3, 5]
+      },
+      {
+       id: 2,
+       name: "Habit 2 name",
+       days: [1, 3, 4, 6]
+      }
      ]
      ```
 - Delete habit
